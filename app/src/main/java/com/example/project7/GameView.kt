@@ -55,7 +55,7 @@ class GameView(context: Context) : View(context) {
                     if (balloons.allPopped()) {
                         gameWon = true
                         gameWon()
-                    } else if (attempts <= 0) {
+                    } else if (attempts < balloons.getBalloons().size) {
                         gameOver()
                     }
                 }
